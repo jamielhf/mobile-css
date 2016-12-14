@@ -1,6 +1,6 @@
 # 移动端自适应布局的两种方式
 
-## rem+js  
+## 1、 rem+js  
 
 ### scss 代码  
 
@@ -38,12 +38,12 @@ if (!doc.addEventListener) return;
 > 写scss的时候，就可以根据设计稿的尺寸来写，如：
 
 ```
-html,body{
-  min-width:320px;
+div{
+  width:px2rem(100);  //设计稿宽度是100px
   font-size:px2rem(16) ; //设计稿字体是16px
 }
 ```
-## vw的方式
+## 2、 vw的方式
 
 ### scss 代码
 
@@ -59,8 +59,8 @@ $screen:750;
 > 写scss的时候，就可以根据设计稿的尺寸来写，如：
 
 ```
-html,body{
-  min-width:320px;
+div{
+  width:px2vw(100);  //设计稿宽度是100px
   font-size:px2vw(16) ; //设计稿字体是16px
 }
 ```
