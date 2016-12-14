@@ -2,7 +2,7 @@
 
 ## rem+js  
 
->scss 代码  
+### scss 代码  
 
 ``` 
 //基础font-size
@@ -17,7 +17,7 @@ $screen:750;
 
 ```
 
->js  代码   
+### js  代码 (在head引入)  
 
 ``` js
 (function (doc, win) {
@@ -35,9 +35,17 @@ if (!doc.addEventListener) return;
 
 ```
 
+> 写scss的时候，就可以根据设计稿的尺寸来写，如：
+
+```
+html,body{
+  min-width:320px;
+  font-size:px2rem(16) ; //设计稿字体是16px
+}
+```
 ## vw的方式
 
-> scss 代码
+### scss 代码
 
 ```
 $screen:750;
@@ -46,5 +54,14 @@ $screen:750;
   @return #{($n/$screen)*100}vw
 }
 
+```
+
+> 写scss的时候，就可以根据设计稿的尺寸来写，如：
+
+```
+html,body{
+  min-width:320px;
+  font-size:px2vw(16) ; //设计稿字体是16px
+}
 ```
 
