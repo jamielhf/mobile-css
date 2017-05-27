@@ -66,7 +66,9 @@ div{
 ```
 
 
-### 第一种的方式在页面加载的时候会有个重置css的过程，导致了初始化的时候会出现页面从小变大的闪烁
+## 第一种的方式在页面加载的时候会有个重置css的过程，导致了初始化的时候会出现页面从小变大的闪烁
+
+### 以下是另一种方法，比较完善
 
 scss文件
 ```
@@ -169,9 +171,7 @@ js文件
 
     function refreshRem() {
         var width = docEl.getBoundingClientRect().width;
-        if (width / dpr > 540) {
-            width = 540 * dpr;
-        }
+     
         var rem = width / 10;
 
         if(window.__max_html_width_) {
