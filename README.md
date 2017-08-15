@@ -43,7 +43,7 @@ div{
   font-size:px2rem(16) ; //设计稿字体是16px
 }
 ```
-## 2、 vw的方式
+## 2、 vw的方式(不用到js，但对兼容性有要求)
 
 ### scss 代码
 
@@ -78,7 +78,7 @@ scss文件
 /* 设计图宽度 
 如设计稿750，分10份， 1rem = 75px
 base：https://github.com/amfe/lib-flexible */
-$baseWidthRate: 36;
+$baseWidthRate: 36;    //如设计稿是360px的话，就是36
 
 /* px转换为rem */
 @function r($num) {
@@ -89,10 +89,6 @@ $baseWidthRate: 36;
 /* === 全局变量配置 === */
 $base-font-size          : r(14) !default; /* // 字号 */
 $base-font-family        : "Microsoft YaHei",Tahoma, Arial, "Helvetica Neue", Helvetica, sans-serif !default; /* // 字体族 */
-$base-line-height        : 1.5 !default; /* // 行号 */
-$base-color              : #333 !default; /* // 字体颜色 */
-$base-background-color   : #F2F2F2 !default; /* // 背景颜色 */
-$base-font-weight		 : normal; /* //大小 */
 
 
 ```
@@ -224,7 +220,13 @@ js文件
 })(window, window['lib'] || (window['lib'] = {}));
 ```
 
-
+>完善的方法其实主要在初始的js这块。  
+>完善后的方法写scss的时候，也跟上面的一样，可以根据设计稿的尺寸来写，如：
+```
+div{
+  width:r(100);  //设计稿量的宽度是100px
+}
+```
 
 
 
