@@ -92,7 +92,7 @@ $base-font-family        : "Microsoft YaHei",Tahoma, Arial, "Helvetica Neue", He
 
 
 ```
-js文件
+js文件(放在head)
 ```
 /*!
  * from: https://github.com/amfe/lib-flexible
